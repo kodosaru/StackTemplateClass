@@ -8,7 +8,6 @@
 #define __STACK__HPP__
 
 #include <iostream>
-#include <sstream>
 
 template <class T>
 class Stack {
@@ -71,8 +70,6 @@ class Stack {
                 std::cout<<"\nEnter an element: "<<std::endl;
                 std::cin>>inVal;
             }
-            // Note: This fixes a bug in the original implementation. You must use "++top", not "top++"
-            // because the increment of "top" must happen before the assignment of "element[top]".
             element[++top]=inVal;
             std::cout<<"Element["<<top<<"]="<<element[top]<<" added successfully"<<std::endl;
         }
@@ -98,15 +95,12 @@ class Stack {
         {
             return;
         }
-        std::ostringstream ss;
         
         for(int i=top;i>=0;i--)
         {
             if(i==top)
             {
-                ss.str("");
-                ss<<top;
-                std::cout<<"element["<<ss.str()<<"]: "<<element[top]<<" top"<<std::endl;
+                std::cout<<"element["<<i<<"]: "<<element[top]<<" top"<<std::endl;
             }
             else if(i==0)
             {
@@ -114,9 +108,7 @@ class Stack {
             }
             else
             {
-                ss.str("");
-                ss<<i;
-                std::cout<<"element["+ss.str()+"]: "<<element[i]<<std::endl;
+                std::cout<<"element["<<i<<"]: "<<element[i]<<std::endl;
             }
         }
     }
@@ -126,7 +118,7 @@ class Stack {
         srand((uint)time(NULL));
         std::cout<<"Begin demo..."<<std::endl;
         
-        std::cout<<std::endl<<"-->Add five items to the stack"<<std::endl;
+        std::cout<<std::endl<<"-->Add "<<size<<" items to the stack"<<std::endl;
         for(int i=0;i<size;i++)
         {
             push(rand() % 10);

@@ -1,7 +1,9 @@
 //
 //  Main.cpp
+//  CountObjects
 //
 //  Created by Don Johnson on 4/22/14.
+//  Copyright (c) 2014 Donald Johnson. All rights reserved.
 //
 #include "Stack.hpp"
 #define DEBUG 1
@@ -12,6 +14,10 @@ int main()
 {
     int menuChoice;
     Stack <int> *pS=NULL,*pD=NULL;
+    
+    // Note: You don't have to use pointers to the stack. You can:
+    // 1. Instantiate with "Stack <int> s;"
+    // 2. Call methods with "s.push(7);", "s.pop();" etc.
     
     while(true)
     {
