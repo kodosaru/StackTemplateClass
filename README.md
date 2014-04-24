@@ -1,4 +1,4 @@
-![image](./images/saku_robot__anton_yu_01.png)
+![image](./images/Data_stack.svg)
 Stack Template Class
 ===========================
 **An implementation and demonstration of a C++ stack template class**
