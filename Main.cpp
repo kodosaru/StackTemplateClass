@@ -1,7 +1,9 @@
 //
-//  main.cpp
+//  Main.cpp
+//  CountObjects
 //
 //  Created by Don Johnson on 4/22/14.
+//  Copyright (c) 2014 Donald Johnson. All rights reserved.
 //
 #include "Stack.hpp"
 
@@ -9,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    int menuChoice;
+    string input;
     Stack <int> *pS=NULL,*pD=NULL;
     
     // Note: You don't have to use pointers to the stack. You can:
@@ -22,9 +24,9 @@ int main()
         cout<<"1.Push\n2.Pop\n3.Print\n4.Demo\n5.Exit";
         cout<<"\n***************************************\n";
         cout<<"\nEnter option: ";
-        cin>>menuChoice;
+        cin>>input;
         
-        switch(menuChoice)
+        switch(atoi(input.c_str()))
         {
             case 1:
                 if(pS==NULL)
@@ -67,7 +69,7 @@ int main()
                 break;
                 
             default:
-                cout<<"\n------- Wrong Option -------\n";
+                cout<<"Choose menu item between 1 and 5"<<endl;
                 break;
         }
     }

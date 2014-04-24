@@ -62,7 +62,7 @@ class Stack {
         }
     }
     
-    void push(int inVal=-INT_MAX) {
+    void push(T inVal=-INT_MAX) {
         if(isFull())
         {
             return;
@@ -153,4 +153,4 @@ class Stack {
 
 // See more at: http://www.techfinite.net/2013/10/program-for-stack-data-structure-in-cpp.html#sthash.L4uDyzW4.dpuf
 
-#endif /* defined(__STACK__HPP__) */
+#endif /* defined(__CountObjects__Stack__) */
