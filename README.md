@@ -1,4 +1,4 @@
-![image](./images/Data_stack.svg)
+![image](./images/Data_stack.png)
 Stack Template Class
 ===========================
 **An implementation and demonstration of a C++ stack template class**
