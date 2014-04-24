@@ -33,7 +33,9 @@ int main()
                 {
                     pS=new Stack<int>();
                 }
-                pS->push();
+                cout<<"\nEnter an element: "<<std::endl;
+                cin>>input;
+                pS->push(atoi(input.c_str()));
                 break;
                 
             case 2:

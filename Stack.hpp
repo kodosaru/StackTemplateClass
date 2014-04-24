@@ -62,35 +62,31 @@ class Stack {
         }
     }
     
-    void push(T inVal=-INT_MAX) {
+    void push(T inVal) {
         if(isFull())
         {
             return;
         }
         else
         {
-            if(inVal==-INT_MAX)
-            {
-                std::cout<<"\nEnter an element: "<<std::endl;
-                std::cin>>inVal;
-            }
             stack[++top]=inVal;
             if(DEBUG)
                 std::cout<<"stack["<<top<<"]="<<stack[top]<<" added successfully"<<std::endl;
         }
     }
     
-    void pop()
+    T pop()
     {
         if(isEmpty())
         {
-            return;
+            return (T)NULL;
         }
         else
         {
             if(DEBUG)
                 std::cout<<"stack["<<top<<"]="<<stack[top]<<" deleted successfully"<<std::endl;
             top=top-1;
+            return stack[top+1];
         }
     }
     
