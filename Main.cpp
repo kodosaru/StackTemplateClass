@@ -1,5 +1,5 @@
 //
-//  Main.cpp
+//  main.cpp
 //
 //  Created by Don Johnson on 4/22/14.
 //
