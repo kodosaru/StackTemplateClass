@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Donald Johnson. All rights reserved.
 //
 #include "Stack.hpp"
-#define DEBUG 1
 
 using namespace std;
 

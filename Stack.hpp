@@ -9,6 +9,10 @@
 
 #include <iostream>
 
+#ifndef DEBUG
+    #define DEBUG 1
+#endif
+
 template <class T>
 class Stack {
     public : T *element;
@@ -71,7 +75,8 @@ class Stack {
                 std::cin>>inVal;
             }
             element[++top]=inVal;
-            std::cout<<"Element["<<top<<"]="<<element[top]<<" added successfully"<<std::endl;
+            if(DEBUG)
+                std::cout<<"Element["<<top<<"]="<<element[top]<<" added successfully"<<std::endl;
         }
     }
     
