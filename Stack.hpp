@@ -71,7 +71,7 @@ class Stack {
                 std::cout<<"\nEnter an element: "<<std::endl;
                 std::cin>>inVal;
             }
-            // Note: This fixes a bug in the original implementation, you must use "++top", not "top++"
+            // Note: This fixes a bug in the original implementation. You must use "++top", not "top++"
             // because the increment of "top" must happen before the assignment of "element[top]".
             element[++top]=inVal;
             std::cout<<"Element["<<top<<"]="<<element[top]<<" added successfully"<<std::endl;
