@@ -153,4 +153,4 @@ class Stack {
 
 // See more at: http://www.techfinite.net/2013/10/program-for-stack-data-structure-in-cpp.html#sthash.L4uDyzW4.dpuf
 
-#endif /* defined(__CountObjects__Stack__) */
+#endif /* defined(__STACK__HPP__) */
