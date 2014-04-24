@@ -15,7 +15,7 @@
 
 template <class T>
 class Stack {
-    public : T *element;
+    public : T *stack;
     
     int top,size;
     
@@ -31,7 +31,7 @@ class Stack {
             size=inVal;
         }
         top=-1;
-        element=new T[size];
+        stack=new T[size];
     }
     
     int isFull()
@@ -74,9 +74,9 @@ class Stack {
                 std::cout<<"\nEnter an element: "<<std::endl;
                 std::cin>>inVal;
             }
-            element[++top]=inVal;
+            stack[++top]=inVal;
             if(DEBUG)
-                std::cout<<"Element["<<top<<"]="<<element[top]<<" added successfully"<<std::endl;
+                std::cout<<"stack["<<top<<"]="<<stack[top]<<" added successfully"<<std::endl;
         }
     }
     
@@ -89,7 +89,7 @@ class Stack {
         else
         {
             if(DEBUG)
-                std::cout<<"Element["<<top<<"]="<<element[top]<<" deleted successfully"<<std::endl;
+                std::cout<<"stack["<<top<<"]="<<stack[top]<<" deleted successfully"<<std::endl;
             top=top-1;
         }
     }
@@ -105,15 +105,15 @@ class Stack {
         {
             if(i==top)
             {
-                std::cout<<"element["<<i<<"]: "<<element[top]<<" top"<<std::endl;
+                std::cout<<"stack["<<i<<"]: "<<stack[top]<<" top"<<std::endl;
             }
             else if(i==0)
             {
-                std::cout<<"element[0]: "<<element[0]<<" bottom"<<std::endl;
+                std::cout<<"stack[0]: "<<stack[0]<<" bottom"<<std::endl;
             }
             else
             {
-                std::cout<<"element["<<i<<"]: "<<element[i]<<std::endl;
+                std::cout<<"stack["<<i<<"]: "<<stack[i]<<std::endl;
             }
         }
     }
